@@ -12,14 +12,21 @@
     </script>
 </head>
 <body onload='loading()'>
-    <h1>
+    <header class="title">
+        Sorting Algorithms
+    </header>
+    <h1 class = "subtitle">
+        Below are different types of sorting algithims. Click the button to do 1 at a time, or click the bottom button to do all sorts at once to see the efficiency.
     </h1>
     <div class = 'bubblesort'>
 
     <div id = box1>
-        <h1>
+        <h1 class = title>
             Bubble Sort
         </h1>
+        <h2 class = "subheaders">
+            Evaluate 2 at a time, swap if one to the right is larger
+        </h2>
         <!--
          <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;">
         </canvas>
@@ -79,9 +86,12 @@
     <div class = 'secondsort'>
 
         <div id = box2>
-            <h1>
+            <h1 class = title>
                 Selection Sort
             </h1>
+            <h2 class = "subheaders">
+                Evaluate 1 at a time, find largest and sort it
+            </h2>
             <!--
              <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;">
             </canvas>
@@ -137,8 +147,7 @@
         </div>
         <div class = clr></div>
         <button onclick="go2()">click</button>
-        <br>
-        <button onclick='bothgo()'>go both</button>
 </div>
+    <button style = "margin-left:10%" onclick='bothgo()'>go both</button>
 </body>
 </html>
