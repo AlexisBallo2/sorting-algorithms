@@ -19,7 +19,7 @@ function myFunction2() {
         items1[i].style.paddingTop = [list_of_numbers2[i], 'px'].join("");
         
     }
-    console.log(items1)
+    console.log(items1)  
 }
 
 
