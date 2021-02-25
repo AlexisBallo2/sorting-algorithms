@@ -7,15 +7,15 @@ function myFunction2() {
         console.log('sorted')
         done()
     }
-    var width_of_box = document.getElementById("box2").clientWidth
+    var width_of_box2 = document.getElementById("box2").clientWidth
     var ul1 = document.getElementById("menu2");
     var items1 = ul1.getElementsByTagName("li");
     for (var i = 0; i < items1.length; ++i) {
         // do something with items1[i], which is a <li> element
         //console.log(items1[i]);
-        var value = (width_of_box/items1.length).toString();
-        items1[i].style.paddingRight = [value/2, 'px'].join("");
-        items1[i].style.paddingLeft = [value/2, 'px'].join("");
+        var value = (width_of_box2/(items1.length)).toString();
+        //items1[i].style.paddingRight = [value, 'px'].join("");
+        //items1[i].style.paddingLeft = [value, 'px'].join("");
         items1[i].style.paddingTop = [list_of_numbers2[i], 'px'].join("");
         
     }
@@ -59,7 +59,8 @@ function go2() {
     if(j1>list_of_numbers2.length-stoppingPoint2){
         console.log('max is ' + current_max)
         var swapval = list_of_numbers2[list_of_numbers2.length-stoppingPoint2+1]
-        var posofmax = list_of_numbers2.indexOf(current_max)
+        var posofmax = list_of_numbers2.indexOf(current_max);
+        //items1[posofmax].style.backgroundColor = 'green';
         console.log(swapval + "< swap val /// pos of max -> "+ posofmax)
         list_of_numbers2[list_of_numbers2.indexOf(swapval)]= list_of_numbers2[posofmax]
         list_of_numbers2[posofmax] = swapval;
@@ -71,7 +72,6 @@ function go2() {
     } else{
         j1=j1+1;
     }
- 
 
 } 
 
@@ -119,4 +119,9 @@ function iteration2(){
 function iteration2(){
     var ul1 = document.getElementById("menu2");
     var items1 = ul1.getElementsByTagName("li");
+}
+
+function bothgo(){
+    go1()
+    go2()
 }

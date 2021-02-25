@@ -14,8 +14,8 @@ function myFunction() {
         // do something with items[i], which is a <li> element
         //console.log(items[i]);
         var value = (width_of_box/items.length).toString();
-        items[i].style.paddingRight = [value/2, 'px'].join("");
-        items[i].style.paddingLeft = [value/2, 'px'].join("");
+       // items[i].style.paddingRight = [value/2, 'px'].join("");
+       // items[i].style.paddingLeft = [value/2, 'px'].join("");
         items[i].style.paddingTop = [list_of_numbers[i], 'px'].join("");
         
     }
@@ -65,9 +65,12 @@ function isArraySorted(arr){
 
 function go1() {
     //for (var i = 2; i < list_of_numbers.length; ++i) {
+        var ul = document.getElementById("menu");
+        var items = ul.getElementsByTagName("li");
         iteration()
         if(j>list_of_numbers.length-stoppingPoint){
             stoppingPoint++;
+            //items[list_of_numbers.length-stoppingPoint2 +1].style.backgroundColor = "yellow"
             j=1;
         } else {
             j=j+1;
@@ -80,7 +83,13 @@ function iteration(){
     var items = ul.getElementsByTagName("li");
     console.log(items)
     for (var i = 0; i < items.length; ++i){
-        items[i].style.backgroundColor = "black"
+        if(i>list_of_numbers.length-stoppingPoint+1){
+            //items[list_of_numbers.length-stoppingPoint2 +1].style.backgroundColor = "yellow"
+            items[i].style.backgroundColor = "yellow"
+        } else{
+            items[i].style.backgroundColor = "black"
+        }
+        
     }
     var str2 = "px"
     var width_of_box = document.getElementById("box1").clientWidth
@@ -89,7 +98,7 @@ function iteration(){
     //items[j-1].style.backgroundColor = 'black'
     var place = j
     var placeminus1 = j-1
-    items[placeminus1].style.backgroundColor = "yellow"
+    items[placeminus1].style.backgroundColor = "blue"
     items[place].style.backgroundColor = "green"
     if(list_of_numbers[place]<list_of_numbers[placeminus1]){ 
         //get the values of the two boxes
@@ -109,7 +118,7 @@ function iteration(){
         items[placeminus1].style.paddingTop = [list_of_numbers[a], 'px'].join(""); 
         console.log("swapped")
         console.log(list_of_numbers)
-        } 
+        }
         myFunction()
 
 }

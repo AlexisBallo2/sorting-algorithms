@@ -62,3 +62,13 @@
     outline: 5px solid rgb(88, 28, 28);
     
 }
+
+#menu2 li {
+    padding-left:3.55% ;
+    padding-right: 3.55%;
+}
+
+#menu li {
+    padding-left:3.55% ;
+    padding-right: 3.55%;
+}
